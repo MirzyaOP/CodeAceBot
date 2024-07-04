@@ -28,7 +28,6 @@ boot = time.time()
 async def code():
     try:
         await app.start()
-        await app2.start()
     except FloodWait as ex:
         LOGGER.warning(ex)
         await asyncio.sleep(ex.value)
